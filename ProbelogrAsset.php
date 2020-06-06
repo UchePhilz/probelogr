@@ -53,12 +53,9 @@ class ProbelogrAsset {
         $err = curl_error($curl);
 
 
-        \Yii::error(self::$URL);
-        \Yii::error($response);
-        \Yii::error($err);
         curl_close($curl);
         if ($err) {
-            \Yii::error($err);
+            
             return null;
         } else {
             return json_decode($response);
