@@ -1,0 +1,9 @@
+POST /logit/cass-log HTTP/1.1
+Host: api.probelogr.com
+accessToken: {accessToken}
+Content-Type: application/json
+
+{
+    "tags": "VIEW LOGIN",
+    "body": "type Exception report messageInte"
+}
