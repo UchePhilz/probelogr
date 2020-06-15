@@ -13,31 +13,8 @@ Before you continue, there are some things you need to have done:
 
 # How to use Probelogr Implementation Code
 
-## 1. Java Implementation (ProbelogrCore.java)
-1.  Copy the java implementation code into your project in a package of your choosing
-2.  __Setup Java Config:__ Use the __ProbelogrCore.updateConfig(String probelogrApi,String accessToken)__. It is a good idea to set up this config in a portion of the project that will only run once when the project starts up.
-3. __Pushing logs:__ The ProbelogrCore.pushLog(String,String | Object) method should be called when you want to push a log to the Probelogr account. The tag parameters must have already been created for your app in __App Settings__
-```
-ProbelogrCore.pushLog(String tag, String body);
-or
-ProbelogrCore.pushLog(String tag, Object body);
-```
-__NOTE:__ The pushLog(String tag, Object body); needs Gson dependency.
-The Gson dependency is used to serialize objects to be sent in JSON Format
 
-  
-  
-## 2. PHP Implementation (ProbelogrAsset.php)
-1.  Copy the java implementation code into your project in a package of your choosing
-2.  __Setup Java Config:__ Use the __app\assets\ProbelogrAsset::updateConfig($probelogrApiUrl,$accessToken)__. It is a good idea to set this config in a portion of the project that will only run once when the project starts ups.
-3. __Pushing logs:__ The \app\assets\ProbelogrAsset::pushLog($tag, $log); method should be called when you want to push a log to your Probelogr account.
-The tag parameters must have already been created for your app in __App Settings__
-```
-\app\assets\ProbelogrAsset::pushLog($tag, $log);
-```
-__NOTE:__ When you copy the PHP file, you are free to make changes as suit your software.
-
-## 3. Javascript Implementation
+## 1. Javascript Implementation
 #### There are are two way to implement use probelogr for your javascript application
 __Remote Script:__
 1. Copy the scripts from the __probelogr.html__ file
@@ -56,3 +33,28 @@ probelogr.pushLog(tag,body);
 ```
 probelogr.pushLog(tag,body);
 ```
+
+## 2. Java Implementation (ProbelogrCore.java)
+1.  Copy the java implementation code into your project in a package of your choosing
+2.  __Setup Java Config:__ Use the __ProbelogrCore.updateConfig(String probelogrApi,String accessToken)__. It is a good idea to set up this config in a portion of the project that will only run once when the project starts up.
+3. __Pushing logs:__ The ProbelogrCore.pushLog(String,String | Object) method should be called when you want to push a log to the Probelogr account. The tag parameters must have already been created for your app in __App Settings__
+```
+ProbelogrCore.pushLog(String tag, String body);
+or
+ProbelogrCore.pushLog(String tag, Object body);
+```
+__NOTE:__ The pushLog(String tag, Object body); needs Gson dependency.
+The Gson dependency is used to serialize objects to be sent in JSON Format
+
+  
+  
+## 3. PHP Implementation (ProbelogrAsset.php)
+1.  Copy the java implementation code into your project in a package of your choosing
+2.  __Setup Java Config:__ Use the __app\assets\ProbelogrAsset::updateConfig($probelogrApiUrl,$accessToken)__. It is a good idea to set this config in a portion of the project that will only run once when the project starts ups.
+3. __Pushing logs:__ The \app\assets\ProbelogrAsset::pushLog($tag, $log); method should be called when you want to push a log to your Probelogr account.
+The tag parameters must have already been created for your app in __App Settings__
+```
+\app\assets\ProbelogrAsset::pushLog($tag, $log);
+```
+__NOTE:__ When you copy the PHP file, you are free to make changes as suit your software.
+
