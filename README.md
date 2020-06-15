@@ -41,9 +41,9 @@ __NOTE:__ When you copy the PHP file, you are free to make changes as suit your 
 #### There are are two way to implement use probelogr for your javascript application
 __Remote Script:__
 1. copy the scripts from the __probelogr.html__ file
+Paste this on top of your page, replace {accesstoken} with the accessToken that you genenerated
+on your app settings on probelogr.
 ```
-//Paste this on top of your page, replace {accesstoken} with the accessToken that you genenrated
-//on your app settings on probelogr.
 <script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>
 
 //Call the function below to push logs to your probelogr account.
