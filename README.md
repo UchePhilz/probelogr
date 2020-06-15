@@ -52,4 +52,7 @@ This can be done on any portion of your webpage, but it must be below (<script s
 probelogr.pushLog(tag,body);
 ```
 
-2. If you need more customization then you can copy the __probelogr.js__ into your project and call the probelogr.pushLog(tag,body);
+2. If you need more customization then you can copy the __probelogr.js__ into your project and call the
+```
+probelogr.pushLog(tag,body);
+```
