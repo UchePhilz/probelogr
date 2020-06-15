@@ -15,18 +15,34 @@ import java.util.logging.Logger;
 
 public class ProbelogrCore {
 
-    //You can place your configuration here
+        //You can place your configuration here
     private static String ACCESS_TOKEN = "";
 
     //url
     private static String URL = "";
 
+    /**
+     * 
+     * This function updates your Probelogr configuration with the URL and accessToken for your application that has created on www.probelogr.com
+     * 
+     * @param url this is the URL to Probelogr API <br>(https://api.probelogr.com/logit/cass-log | https://api.probelogr.com/logit/push-log)
+     * @param accessToken this access token needs to be generated when your register at www.probelogr.com
+     */
     public static void updateConfig(String url, String accessToken) {
         ProbelogrCore.URL = url;
         ProbelogrCore.ACCESS_TOKEN = accessToken;
-        System.out.println("Config Updated");
+        System.out.println("Config updated");
     }
 
+    /**
+     * The makeBody function constructs a json string to be used as the request body with two parameters (tag & body)
+     * <br>
+     * This function should be used if you when you do not have Gson library
+     * 
+     * @param tag this tag will be generated on www.probelogr.com on the app settings page
+     * @param body this is a value that needs to be logged
+     * @return 
+     */
     private static String makeBody(String tag, String body) {
         String POST_PARAMS = "{"
                 + "    \"tags\": \"" + tag + "\",\r\n"
@@ -35,24 +51,53 @@ public class ProbelogrCore {
         return POST_PARAMS;
     }
 
+    /**
+     * The makeBody function constructs a string to be used as the request
+     * <br> body with to parameters.
+     * <br>This function should be used if you have a Gson library and the function
+     * <br> can be removed if you do not have GSON library
+     * 
+     * 
+     * @param tag this tag will be generated on www.probelogr.com on the app settings page
+     * @param body object that needs to be logged on www.probelogr.com
+     * @return json string of body and tag
+     */
     private static String makeBody(String tag, Object body) {
         HashMap<String, Object> b = new HashMap();
         b.put("body", new Gson().toJson(body));
         b.put("tags", tag);
-        String POST_PARAMS = new Gson().toJson(b);
-        return POST_PARAMS;
+        return new Gson().toJson(b);
     }
 
+    /**
+     * Push your logs to probelogr 
+     * 
+     * 
+     * @param tag this tag will be generated on www.probelogr.com on the app settings page
+     * @param body object that needs to be logged on www.probelogr.com
+     */
     public static void pushLog(String tag, String body) {
         String logBody = makeBody(tag, body);
         pushEngine(logBody);
     }
 
+    /**
+     * This function can be used to push a log record to your probelogr app
+     * 
+     * 
+     * @param tag this tag will be generated on www.probelogr.com on the app settings page
+     * @param body object that needs to be logged on www.probelogr.com
+     */
     public static void pushLog(String tag, Object body) {
         String logBody = makeBody(tag, body);
         pushEngine(logBody);
     }
 
+    
+    /**
+     * 
+     * @param body 
+     */
     private static void pushEngine(String body) {
         try {
             URL obj = new URL(URL);
@@ -82,6 +127,7 @@ public class ProbelogrCore {
             } else {
                 System.out.println("POST NOT WORKED");
             }
+            
         } catch (MalformedURLException ex) {
             Logger.getLogger(ProbelogrCore.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
