@@ -16,13 +16,14 @@ Before you continue there are some There are some things you need to have done.
 ## 1. Java Implementation
 1.  Copy the java implementation code into your project in a directory if your chosing,
 2.  __Set Up Java Config:__ Use the __ProbelogrCore.updateConfig(String url,String accessToken)__, it is a good idea to set this config in portion of the project that will only run once when the project starts ups.
-3. __Pushing logs:__ The pushLog() method should be called to when your want to push a message to probelogr app account
+3. __Pushing logs:__ The ProbelogrCore.pushLog(String,String | Object) method should be called to when your want to push a log to probelogr app account
 the tag paremeter is must have been created for yout ap
 ```
- 
 ProbelogrCore.pushLog(String tag, String body);
 or
 ProbelogrCore.pushLog(String tag, Object body);
+
+it should be noted that the pushLog(String tag, Object body); needs Gson dependency, as it serializes object to be sent as JSON Format
 ```
 4. 
   
