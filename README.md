@@ -39,6 +39,6 @@ the tag paremeter is must have been created for your app
 __NOTE:__ When you copy the php file, you are free to make changes as suits your software.
 
 ## 3. Javascript Implementation
-### There are are two way to implement use probelogr for your javascript application
+#### There are are two way to implement use probelogr for your javascript application
 1. Use script tag
 2. copy code
