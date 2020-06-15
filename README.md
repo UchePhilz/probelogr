@@ -5,7 +5,7 @@
 This repository contains implementations of the Probelogr API on different languages.
 
 ## Prerequisite
-Before you continue there are some There are some things you need to have done.
+Before you continue there are some things you need to have done.
 1. You should have registered on __[www.probelogr.com](https://www.probelogr.com "Probelogr's Homepage")__
 2. You should have created a __Project__ > __App__ > __App Settings__
 3. Your should have generated an __Access key__ in __App Settings__ and added one or more __Activity Tags__
@@ -14,8 +14,8 @@ Before you continue there are some There are some things you need to have done.
 # How to use Probelogr Implementation Code
 
 ## 1. Java Implementation (ProbelogrCore.java)
-1.  Copy the java implementation code into your project in a directory if your chosing,
-2.  __Set Up Java Config:__ Use the __ProbelogrCore.updateConfig(String url,String accessToken)__, it is a good idea to set this config in portion of the project that will only run once when the project starts ups.
+1.  Copy the java implementation code into your project in a package if your chosing,
+2.  __Set Up Java Config:__ Use the __ProbelogrCore.updateConfig(String probelogrApi,String accessToken)__, it is a good idea to set this config in a portion of the project that will only run once when the project starts ups.
 3. __Pushing logs:__ The ProbelogrCore.pushLog(String,String | Object) method should be called to when your want to push a log to probelogr app account
 the tag paremeter is must have been created for yout ap
 ```
@@ -28,6 +28,15 @@ The Gson dependency is used to serialize object to be sent in JSON Format
 
   
   
-## 1. PHP Implementation
+## 1. PHP Implementation (ProbelogrAsset.php)
+1.  Copy the php implementation code into your project in a directory if your chosing,
+2.  __Set Up Java Config:__ Use the __app\assets\ProbelogrAsset::updateConfig($probelogrApiUrl,$accessToken)__, it is a good idea to set this config in a portion of the project that will only run once when the project starts ups.
+3. __Pushing logs:__ The \app\assets\ProbelogrAsset::pushLog($tag, $log); method should be called to when your want to push a log to probelogr app account
+the tag paremeter is must have been created for your app
+```
+\app\assets\ProbelogrAsset::pushLog($tag, $log);
+```
+__NOTE:__ When you copy the php file, you are free to make changes as suits your software.
+
 
 ## 1. Javascript Implementation
