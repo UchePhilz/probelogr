@@ -43,13 +43,12 @@ __NOTE:__ When you copy the php file, you are free to make changes as suits your
 __Remote Script:__
 1. Use copy the scripts the probelogr.html file
 ```
-paste this on top of your page, replace {accesstoken} with your accessToken that you genenrated
-on yout app settings on probelogr.
+//paste this on top of your page, replace {accesstoken} with your accessToken that you genenrated
+//on yout app settings on probelogr.
 <script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>
 
-Call the function below to push logs to your probelogr account.
-at any portion of your webpage, but it must be below (<script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>)
-
+//Call the function below to push logs to your probelogr account.
+//at any portion of your webpage, but it must be below (<script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>)
 probelogr.pushLog(tag,body);
 ```
 
