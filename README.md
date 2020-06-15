@@ -53,4 +53,4 @@ at any portion of your webpage, but it must be below (<script src="http://api.pr
 probelogr.pushLog(tag,body);
 ```
 
-2. copy code
+2. if you need more customization then you can copy the probelogr.js
