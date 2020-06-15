@@ -47,12 +47,12 @@ on your __App Settings__ on Probelogr.
 <script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>
 ```
 Call the function below to push logs to your probelogr account.
-This can be done on any portion of your webpage, but it must be below (<script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>)
+This can be done on any portion of your webpage, but it must be below _(<script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>)_
 ```
 probelogr.pushLog(tag,body);
 ```
 
-2. If you need more customization then you can copy the __probelogr.js__ into your project and call the
+2. If you need more customization then you can copy the __probelogr.js__ into your project and call 
 ```
 probelogr.pushLog(tag,body);
 ```
