@@ -14,6 +14,10 @@ Before you continue there are some There are some things you need to have done.
 # How to use Probelogr Implementation Code
 
 ## 1. Java Implementation
+1.  Copy the java implementation code into your project in a directory if your chosing,
+2.  __Set Up Java Config: __ Use the ProbelogrCore.updateConfig(String url,String accessToken), it is a good idea to set this config in port of the project that will only run once, when the project starts ups.
+3. __Pushing logs: __
+  
   
 ## 1. PHP Implementation
 
