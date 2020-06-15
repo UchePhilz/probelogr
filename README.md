@@ -21,4 +21,4 @@ Before you continue there are some There are some things you need to have done.
   
 ## 1. PHP Implementation
 
-## 1. Javascrip Implementation
+## 1. Javascript Implementation
