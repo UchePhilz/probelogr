@@ -1,4 +1,4 @@
-# probelogr
+# Probelogr
 
 # Introduction to Probelogr Implementation
 
@@ -11,8 +11,9 @@ I'll be using the Java code to make an example.
 
 
 Before you continue there are some There are some things you need to have done.
-1. You should have registered on www.probelogr.com
-2. You should have created a Project > App > App Settings
-2. Your should have generated an __Access key__ in __App Settings__.
+1. You should have registered on __www.probelogr.com__
+2. You should have created a __Project__ > __App__ > __App Settings__
+3. Your should have generated an __Access key__ in __App Settings__.
 4. You should have added one or more __Activity Tags__ in.
 
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
