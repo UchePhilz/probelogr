@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Probelogr WEB Implementation</title>
+  
+  <!-- the script apply the probelogr script to your code, do not replace {accessToken} with your accessToken  -->
+  <script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>
+  <!--
+  The script below is used to push your log to your log to the your probelogr account.
+  
+  The tag parameter is a string and must be created in your probelogr app settings
+  The body parameter is the log your want to send to your probelogr app activity
+  -->
+  <script>
+    probelogr.pushLog(tag,body);
+  </script>
+</head>
+<body>
+
+<p>This is a demo page</p>
+
+</body>
+</html>
