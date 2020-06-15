@@ -44,10 +44,10 @@ __Remote Script:__
 Paste this at the top of your page and replace {accesstoken} with the accessToken that you genenerated
 on your __App Settings__ on Probelogr.
 ```
-<script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>
+<script src="https://api.probelogr.com/logit/js-script/{accessToken}"></script>
 ```
 Call the function below to push logs to your probelogr account.
-This can be done on any portion of your webpage, but it must be below _(<script src="http://api.probelogr.com/logit/js-script/{accessToken}"></script>)_
+This can be done on any portion of your webpage, but it must be below (<script src="https://api.probelogr.com/logit/js-script/{accessToken}"></script>)
 ```
 probelogr.pushLog(tag,body);
 ```
