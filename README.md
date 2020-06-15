@@ -23,7 +23,8 @@ ProbelogrCore.pushLog(String tag, String body);
 or
 ProbelogrCore.pushLog(String tag, Object body);
 
-it should be noted that the pushLog(String tag, Object body); needs Gson dependency, as it serializes object to be sent as JSON Format
+it should be noted that the pushLog(String tag, Object body); needs Gson dependency,
+The Gson dependency is used to serialize object to be sent in JSON Format
 ```
 4. 
   
