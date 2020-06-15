@@ -22,11 +22,10 @@ the tag paremeter is must have been created for yout ap
 ProbelogrCore.pushLog(String tag, String body);
 or
 ProbelogrCore.pushLog(String tag, Object body);
-
-it should be noted that the pushLog(String tag, Object body); needs Gson dependency,
-The Gson dependency is used to serialize object to be sent in JSON Format
 ```
-4. 
+__NOTE:__ The pushLog(String tag, Object body); needs Gson dependency,
+The Gson dependency is used to serialize object to be sent in JSON Format
+
   
   
 ## 1. PHP Implementation
