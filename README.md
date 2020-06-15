@@ -28,7 +28,7 @@ The Gson dependency is used to serialize object to be sent in JSON Format
 
   
   
-## 1. PHP Implementation (ProbelogrAsset.php)
+## 2. PHP Implementation (ProbelogrAsset.php)
 1.  Copy the php implementation code into your project in a directory if your chosing,
 2.  __Set Up Java Config:__ Use the __app\assets\ProbelogrAsset::updateConfig($probelogrApiUrl,$accessToken)__, it is a good idea to set this config in a portion of the project that will only run once when the project starts ups.
 3. __Pushing logs:__ The \app\assets\ProbelogrAsset::pushLog($tag, $log); method should be called to when your want to push a log to probelogr app account
@@ -38,5 +38,7 @@ the tag paremeter is must have been created for your app
 ```
 __NOTE:__ When you copy the php file, you are free to make changes as suits your software.
 
-
-## 1. Javascript Implementation
+## 3. Javascript Implementation
+### There are are two way to implement use probelogr for your javascript application
+1. Use script tag
+2. copy code
