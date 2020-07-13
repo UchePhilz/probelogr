@@ -23,11 +23,20 @@ on your __App Settings__ on Probelogr.
 ```
 <script src="https://api.probelogr.com/logit/js-script/{accessToken}"></script>
 ```
-Call the function below to push logs to your probelogr account.
+__probelogr.pushLog(tag,body):__ Call the function below to push logs to your probelogr account.
 This can be done on any portion of your webpage, but it must be below (<script src="https://api.probelogr.com/logit/js-script/{accessToken}"></script>)
 ```
 probelogr.pushLog(tag,body);
 ```
+
+__probelogr.pushOnError(tag):__ The pushOnError function will detect error when a web page loads. a log will be pushed if your page loads with a statusCode above or equals 400.
+```
+probelogr.pushOnError(tag);
+```
+
+__probelogr.pushLogByLink(tag, arrLink, logBody):__ The pushLogByLink function will send a log if an item in the arrLink array matches with the URL of the current page
+```
+probelogr.pushLogByLink(tag,["TAG",["site/error","error.php","Message body"]]);
 
 2. If you need more customization then you can copy the __probelogr.js__ into your project and call 
 ```
