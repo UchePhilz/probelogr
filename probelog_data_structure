@@ -1,0 +1,22 @@
+{
+  "user": {
+    "id": "",
+    "username": "",
+    "email": "",
+    "userAgent":"",
+    "meta":""
+  },
+  "link": {
+    "currentUrl": "",
+    "referrer":"",
+    "visitTime": ""
+  },
+  "log":{
+    "tag":"",
+    "msg":""
+  },
+  "httpStatus":{
+    "statusCode":"",
+    "statusText":""
+  }
+}
