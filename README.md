@@ -23,6 +23,23 @@ on your __App Settings__ on Probelogr.
 ```
 <script src="https://api.probelogr.com/logit/js-script/{accessToken}"></script>
 ```
+__probelogr.probe(tag):__ Call the function below to monitor web activity, such as error & success rate of users interaction.
+track page views and page load time.
+```
+<html>
+  <head>
+    ..
+    <script src="https://api.probelogr.com/logit/js-script/{accessToken}"></script>
+    <script>
+        probelogr.probe({tag});
+    </script>
+  </head>
+  <body>
+    ...
+  </body>
+
+</html>
+```
 __probelogr.pushLog(tag,body):__ Call the function below to push logs to your probelogr account.
 This can be done on any portion of your webpage, but it must be below (<script src="https://api.probelogr.com/logit/js-script/{accessToken}"></script>)
 ```
